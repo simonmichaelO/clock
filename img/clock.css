@@ -1,0 +1,167 @@
+*::after, *::before{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.world-clock {
+    background: linear-gradient(to right, rgb(219, 61, 61), rgb(59, 59, 229));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.clock {
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    border: 5px solid #000000;
+    position: relative;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 8px 10px #888888;
+    transition: 0.5s;
+}
+
+.clock:hover {
+    background: linear-gradient(to right, rgb(219, 61, 61), rgb(59, 59, 229));
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 8px 10px #000000;
+ 
+}
+
+.clock .number {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    color: rgb(3, 2, 2);
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.clock .number1 { --rotation: 30deg; }
+.clock .number2 { --rotation: 60deg; }
+.clock .number3 { --rotation: 90deg; }
+.clock .number4 { --rotation: 120deg; }
+.clock .number5 { --rotation: 150deg; }
+.clock .number6 { --rotation: 180deg; }
+.clock .number7 { --rotation: 210deg; }
+.clock .number8 { --rotation: 240deg; }
+.clock .number9 { --rotation: 270deg; }
+.clock .number10 { --rotation: 300deg; }
+.clock .number11 { --rotation: 330deg; }
+
+.clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid #000000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) *1deg));
+}
+
+.clock::after{
+    content: "";
+    position: absolute;
+    background-color: #000000;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+}
+
+.clock .hand.second {
+    width: 3px;
+    height: 45%;
+    background-color: red;
+}
+.clock .hand.minute {
+    width: 7px;
+    height: 40%;
+    background-color: #000000;
+}
+.clock .hand.hour {
+    width: 10px;
+    height: 35%;
+    background-color: #000000;
+}
+
+
+/* digital clock**/
+
+section {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgb(219, 61, 61), rgb(59, 59, 229));
+}
+
+.datetime {
+    color: #fff;
+    background: #10101e;
+    width: 350px;
+    padding: 15px 10px;
+    border: 3px solid #f7f7f7;
+    border-radius: 10px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.2));
+    transition: 0.5s;
+    transition-property: background, box-shadow, color;
+}
+
+.datetime:hover {
+    background: linear-gradient(to right, rgb(219, 61, 61), rgb(59, 59, 229));
+    box-shadow: 0 0 30px #000000;
+    color: black;
+    border: 3px solid #000000;
+}
+
+.date {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.time {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time span:not(:last-child) {
+    position: relative;
+    margin: 0 6px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.time span:last-child {
+    background: linear-gradient(to right, blue,red);
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+.btn:hover{
+    background: linear-gradient(to right, blue, red);
+}

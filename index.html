@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="./img/clock.css" />
+    <title>World Clock</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+
+    <script src="./img/clock.js" defer></script>
+  </head>
+
+  <body onload="initClock()">
+    <!--world clock start-->
+
+    <section class="world-clock">
+      <div class="clock">
+        <div class="hand hour" data-hour-hand></div>
+        <div class="hand minute" data-minute-hand></div>
+        <div class="hand second" data-second-hand></div>
+        <div class="number number1">1</div>
+        <div class="number number2">2</div>
+        <div class="number number3">3</div>
+        <div class="number number4">4</div>
+        <div class="number number5">5</div>
+        <div class="number number6">6</div>
+        <div class="number number7">7</div>
+        <div class="number number8">8</div>
+        <div class="number number9">9</div>
+        <div class="number number10">10</div>
+        <div class="number number11">11</div>
+        <div class="number number12">12</div>
+      </div>
+    </section>
+    <!--world clock start-->
+
+    <!--digital-clock start-->
+    <section>
+      <div class="datetime">
+        <div class="date">
+          <span id="dayname">Day</span>,
+          <span id="month">Month</span>
+          <span id="daynum">00</span>,
+          <span id="year">Year</span>
+        </div>
+        <div class="time">
+          <span id="hour">00</span>: <span id="minutes">00</span>:
+          <span id="seconds">00</span>
+          <span id="period">AM</span>
+        </div>
+      </div>
+    </section>
+    <!--digital-clock finish-->
+
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <footer class="text-center text-lg-start bg-dark">
+      <div
+        class="container d-flex justify-content-center py-5 align-items-center"
+      >
+        <div class="mx-2">
+          <a href="http://wa.me/2349033328061"  target="_blank" class="bg-light btn btn-lg"
+            ><i class="bi bi-whatsapp"></i
+          ></a>
+        </div>
+        <div class="mx-2">
+          <a href="https://www.instagram.com/simonmichael_o/" target="_blank" class="bg-light btn btn-lg"
+            ><i class="bi bi-instagram"></i></i
+          ></a>
+        </div>
+        <div class="mx-2">
+          <a href="http://twitter.com/SimonMichael_O" target="_blank" class="bg-light btn btn-lg"
+            ><i class="bi bi-twitter"></i></i
+          ></a>
+        </div>
+        <div class="mx-2">
+          <a href="https://www.linkedin.com/in/simon-michael-561160241/" target="_blank" class="bg-light btn btn-lg"
+            ><i class="bi bi-linkedin"></i></i
+          ></a>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div
+        class="text-center text-white p-3"
+        style="background-color: rgba(0, 0, 0, 1)"
+      >
+        © 2022 Copyright:
+        <a class="text-white" href="#"
+          >Simon Michael</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
